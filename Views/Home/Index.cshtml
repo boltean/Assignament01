@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ZenithDataLib.Models.ZenithModels.Event>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Zenith Society</h1>
+    <p class="lead">The Zenith Society is a family oriented non-for-profit organization that holds events during the week. </p>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-12 text-center "> <h4>Zenith Society <br />Activity schedule for the next 7 days:    </h4>
+</div> 
+</div>
+
+<div class="row">
+
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <table class="table">
+
+            @{string eventDate = ""; }
+
+            @foreach (var item in Model)
+            {
+                if (!(item.EventFrom.ToShortDateString() == eventDate))
+                {
+                    <tr class="success">
+                        <td colspan="2" align="left">
+
+                            @item.EventFrom.DayOfWeek, @item.EventFrom.ToString("MMMM dd, yyyy") 
+
+                        </td>
+                    </tr>
+                }
+
+                <tr>
+                    <td>
+                        @item.EventFrom.ToString("HH:mm tt") - @item.EventTo.ToString("HH:mm tt")
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Activity.ActivityDescription)
+                    </td>
+
+                </tr>
+                eventDate = item.EventFrom.ToShortDateString();
+
+            }
+
+        </table>
+    </div>
+    <div class="col-md-3"></div>
+</div>

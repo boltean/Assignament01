@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ZenithDataLib.Models.ZenithModels.Activity>
+
+@{
+    ViewBag.Title = "List Of Activities";
+}
+
+<h2>List Of Activities</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ActivityId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActivityDescription)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivityId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivityDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ActivityDescription }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ActivityDescription }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ActivityDescription })
+        </td>
+    </tr>
+}
+
+</table>
