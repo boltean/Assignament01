@@ -1,4 +1,3 @@
-C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\ApplicationInsights.config
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\roslyn\csc.exe
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -50,7 +49,6 @@ C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\Zenith
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\System.Web.WebPages.Razor.dll
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\WebGrease.dll
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\ZenithDataLib.dll
-C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\ZenithDataLib.pdb
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\Microsoft.AI.Web.xml
