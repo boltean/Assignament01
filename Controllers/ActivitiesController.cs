@@ -20,7 +20,10 @@ namespace ZenithWebSite.Controllers
         // GET: Activities
         public async Task<ActionResult> Index()
         {
-            return View(await db.Activities.ToListAsync());
+            var activities = from a in db.Activities
+                             orderby a.ActivityDescription ascending
+                             select a;
+            return View(await activities.ToListAsync());
         }
 
         // GET: Activities/Details/5

@@ -82,3 +82,5 @@ C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\Zenith
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.pdb
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.Migrations.Zenith.InnitialCreate.resources
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\ZenithDataLib.pdb
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.csprojResolveAssemblyReference.cache
