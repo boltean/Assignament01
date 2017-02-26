@@ -38,7 +38,7 @@
                 @if (item.EventFrom < System.DateTime.Now)
                 { <span style="color:red">EXPIRED</span>}
 
-            
+
 
             </td>
             <td>
@@ -61,6 +61,6 @@
                 @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
             </td>
         </tr>
-                    }
+    }
 
 </table>

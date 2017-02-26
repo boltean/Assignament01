@@ -1,16 +1,16 @@
 ﻿@model ZenithDataLib.Models.ZenithModels.Event
 @using Microsoft.AspNet.Identity
 @{
-    ViewBag.Title = "Create New Event";
+    ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
         <h4>Event</h4>
         <hr />
@@ -34,28 +34,28 @@
         <div class="form-group">
             @Html.LabelFor(model => model.EnteredBy, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-               
+
                 @User.Identity.GetUserName()
             </div>
         </div>
-
         <div class="form-group">
-            @Html.LabelFor(model => model.ActivityDescription, "ActivityDescription", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ActivityId, "Activity", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ActivityDescription", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ActivityDescription, "", new { @class = "text-danger" })
+                @Html.DropDownList("ActivityId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ActivityId, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <!--
-        <div class="form-group">
-            @Html.LabelFor(model => model.CreationDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CreationDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreationDate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CreationDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CreationDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CreationDate, "", new { @class = "text-danger" })
         </div>
-            -->
+    </div>
+        -->
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })

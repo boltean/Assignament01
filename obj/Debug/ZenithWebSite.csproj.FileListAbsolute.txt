@@ -80,7 +80,12 @@ C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\Zenith
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.dll
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.pdb
-C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.Migrations.Zenith.InnitialCreate.resources
-C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.csproj.GenerateResource.Cache
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\bin\ZenithDataLib.pdb
 C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.Migrations.Zenith.InnitialCreate.resources
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.Migrations.Zenith.InnitialCreate1.resources
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.Migrations.Zenith.InnitialCreate2.resources
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.Migrations.Zenith.InnitialCreate3.resources
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.Migrations.Zenith.InnitialCreate4.resources
+C:\Users\admin\Documents\ASP.NET MVC BCIT 2017\Assignment01\ZenithSociety\ZenithWebSite\obj\Debug\ZenithWebSite.Migrations.Zenith.InnitialCreate5.resources

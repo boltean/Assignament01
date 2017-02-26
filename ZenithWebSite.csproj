@@ -208,9 +208,29 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Zenith\201702210353127_InnitialCreate.cs" />
-    <Compile Include="Migrations\Zenith\201702210353127_InnitialCreate.Designer.cs">
-      <DependentUpon>201702210353127_InnitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\Zenith\201702250546569_InnitialCreate.cs" />
+    <Compile Include="Migrations\Zenith\201702250546569_InnitialCreate.Designer.cs">
+      <DependentUpon>201702250546569_InnitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Zenith\201702250550386_InnitialCreate1.cs" />
+    <Compile Include="Migrations\Zenith\201702250550386_InnitialCreate1.Designer.cs">
+      <DependentUpon>201702250550386_InnitialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Zenith\201702250604174_InnitialCreate2.cs" />
+    <Compile Include="Migrations\Zenith\201702250604174_InnitialCreate2.Designer.cs">
+      <DependentUpon>201702250604174_InnitialCreate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Zenith\201702250606512_InnitialCreate3.cs" />
+    <Compile Include="Migrations\Zenith\201702250606512_InnitialCreate3.Designer.cs">
+      <DependentUpon>201702250606512_InnitialCreate3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Zenith\201702250610063_InnitialCreate4.cs" />
+    <Compile Include="Migrations\Zenith\201702250610063_InnitialCreate4.Designer.cs">
+      <DependentUpon>201702250610063_InnitialCreate4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Zenith\201702250625146_InnitialCreate5.cs" />
+    <Compile Include="Migrations\Zenith\201702250625146_InnitialCreate5.Designer.cs">
+      <DependentUpon>201702250625146_InnitialCreate5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Zenith\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -305,8 +325,23 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\Zenith\201702210353127_InnitialCreate.resx">
-      <DependentUpon>201702210353127_InnitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\Zenith\201702250546569_InnitialCreate.resx">
+      <DependentUpon>201702250546569_InnitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Zenith\201702250550386_InnitialCreate1.resx">
+      <DependentUpon>201702250550386_InnitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Zenith\201702250604174_InnitialCreate2.resx">
+      <DependentUpon>201702250604174_InnitialCreate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Zenith\201702250606512_InnitialCreate3.resx">
+      <DependentUpon>201702250606512_InnitialCreate3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Zenith\201702250610063_InnitialCreate4.resx">
+      <DependentUpon>201702250610063_InnitialCreate4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Zenith\201702250625146_InnitialCreate5.resx">
+      <DependentUpon>201702250625146_InnitialCreate5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

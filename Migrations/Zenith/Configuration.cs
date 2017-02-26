@@ -19,18 +19,7 @@ namespace ZenithWebSite.Migrations.Zenith
 
         protected override void Seed(ZenithWebSite.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+    
 
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             if (!roleManager.RoleExists("Admin"))
@@ -65,12 +54,12 @@ namespace ZenithWebSite.Migrations.Zenith
             }
 
 
-            context.Activities.AddOrUpdate(
-                a => a.ActivityId, DummyData.getActivities().ToArray());
-            context.SaveChanges();
+            //context.Activities.AddOrUpdate(
+            //    a => a.ActivityId, DummyData.getActivities().ToArray());
+            //context.SaveChanges();
 
-            context.Events.AddOrUpdate(
-                e => new { e.ActivityDescription, e.EventFrom }, DummyData.getEvents(context).ToArray());
+            //context.Events.AddOrUpdate(
+            //    e => new { e.ActivityId, e.EventFrom }, DummyData.getEvents(context).ToArray());
 
 
         }

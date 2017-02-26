@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
@@ -12,28 +11,27 @@ using ZenithWebSite.Models;
 
 namespace ZenithWebSite.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class ActivitiesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Activities
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             var activities = from a in db.Activities
                              orderby a.ActivityDescription ascending
                              select a;
-            return View(await activities.ToListAsync());
+            return View(activities);
         }
 
         // GET: Activities/Details/5
-        public async Task<ActionResult> Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Activity activity = await db.Activities.FindAsync(id);
+            Activity activity = db.Activities.Find(id);
             if (activity == null)
             {
                 return HttpNotFound();
@@ -52,13 +50,13 @@ namespace ZenithWebSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ActivityDescription,ActivityId,CreationDate")] Activity activity)
+        public ActionResult Create([Bind(Include = "ActivityId,ActivityDescription,CreationDate")] Activity activity)
         {
             if (ModelState.IsValid)
             {
                 activity.CreationDate = System.DateTime.Now;
                 db.Activities.Add(activity);
-                await db.SaveChangesAsync();
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -66,13 +64,13 @@ namespace ZenithWebSite.Controllers
         }
 
         // GET: Activities/Edit/5
-        public async Task<ActionResult> Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Activity activity = await db.Activities.FindAsync(id);
+            Activity activity = db.Activities.Find(id);
             if (activity == null)
             {
                 return HttpNotFound();
@@ -85,25 +83,25 @@ namespace ZenithWebSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ActivityDescription,ActivityId,CreationDate")] Activity activity)
+        public ActionResult Edit([Bind(Include = "ActivityId,ActivityDescription,CreationDate")] Activity activity)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(activity).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(activity);
         }
 
         // GET: Activities/Delete/5
-        public async Task<ActionResult> Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Activity activity = await db.Activities.FindAsync(id);
+            Activity activity = db.Activities.Find(id);
             if (activity == null)
             {
                 return HttpNotFound();
@@ -114,11 +112,11 @@ namespace ZenithWebSite.Controllers
         // POST: Activities/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            Activity activity = await db.Activities.FindAsync(id);
+            Activity activity = db.Activities.Find(id);
             db.Activities.Remove(activity);
-            await db.SaveChangesAsync();
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
