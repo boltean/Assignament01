@@ -11,9 +11,7 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ActivityId)
-        </th>
+ 
         <th>
             @Html.DisplayNameFor(model => model.ActivityDescription)
         </th>
@@ -27,9 +25,7 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ActivityId)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.ActivityDescription)
             </td>
