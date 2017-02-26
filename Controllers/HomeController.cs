@@ -17,14 +17,15 @@ namespace ZenithWebSite.Controllers
         {
             //var events = db.Events.Include(p => p.Activity);
 
-
+            var firstDay = (DateTime.Now.AddDays(1- (int)System.DateTime.Now.DayOfWeek)).ToShortDateString();
 
              var sevenDays = (DateTime.Now.AddDays(8 - (int)System.DateTime.Now.DayOfWeek)).ToShortDateString();
             //var sevenDays = (DateTime.Now.AddDays(18 - (int)System.DateTime.Now.DayOfWeek)).ToShortDateString();
 
             DateTime dateValue = DateTime.Parse(sevenDays);
             ViewBag.DateUntil = dateValue;
-            DateTime minDate = Convert.ToDateTime(DateTime.Now.ToLongDateString());
+            DateTime minDate = Convert.ToDateTime(firstDay);
+
             var events = from e in db.Events.Include(a => a.Activity)
                          where e.EventFrom >= minDate  && e.EventTo <=dateValue && e.IsActive
                          orderby e.EventFrom ascending
