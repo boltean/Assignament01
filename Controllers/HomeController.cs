@@ -22,7 +22,7 @@ namespace ZenithWebSite.Controllers
             var sevenDays = (DateTime.Now.AddDays(8 - (int)System.DateTime.Now.DayOfWeek)).ToShortDateString();
 
             DateTime dateValue = DateTime.Parse(sevenDays);
-
+            ViewBag.DateUntil = dateValue;
             var events = from e in db.Events.Include(a => a.Activity)
                          where e.EventFrom > DateTime.Now && e.EventTo <=dateValue && e.IsActive
                          orderby e.EventFrom ascending
