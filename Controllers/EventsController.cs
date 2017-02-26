@@ -44,7 +44,10 @@ namespace ZenithWebSite.Controllers
         // GET: Events/Create
         public ActionResult Create()
         {
-            ViewBag.ActivityId = new SelectList(db.Activities, "ActivityId", "ActivityDescription");
+            var activities = from a in db.Activities
+                             orderby a.ActivityDescription ascending
+                             select a;
+            ViewBag.ActivityId = new SelectList(activities, "ActivityId", "ActivityDescription");
             return View();
         }
 
