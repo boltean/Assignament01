@@ -11,6 +11,7 @@ using ZenithWebSite.Models;
 
 namespace ZenithWebSite.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ActivitiesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
