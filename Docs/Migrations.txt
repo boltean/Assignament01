@@ -5,4 +5,3 @@ add-migration -ConfigurationTypeName ZenithWebSite.Migrations.Zenith.Configurati
 update-database -ConfigurationTypeName ZenithWebSite.Migrations.Zenith.Configuration
 
 
-WEBSITE_TIME_ZONE: Pacific Standard Time under App Setting in Azure
