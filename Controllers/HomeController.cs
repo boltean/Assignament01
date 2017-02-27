@@ -15,19 +15,37 @@ namespace ZenithWebSite.Controllers
         // GET: Events1
         public ActionResult Index()
         {
-            //var events = db.Events.Include(p => p.Activity);
 
-            var firstDay = (DateTime.Now.AddDays(1- (int)System.DateTime.Now.DayOfWeek)).ToShortDateString();
+            var firstDay = "";
+            var lastDay = "";
 
-             var sevenDays = (DateTime.Now.AddDays(8 - (int)System.DateTime.Now.DayOfWeek)).ToShortDateString();
-            //var sevenDays = (DateTime.Now.AddDays(18 - (int)System.DateTime.Now.DayOfWeek)).ToShortDateString();
 
-            DateTime dateValue = DateTime.Parse(sevenDays);
-            ViewBag.DateUntil = dateValue;
+            if ((int)System.DateTime.Now.DayOfWeek == 0)
+            {
+                firstDay = DateTime.Now.ToShortDateString() + " 12:00";
+            }
+            else
+            {
+                firstDay = DateTime.Now.AddDays(1 - (int)System.DateTime.Now.DayOfWeek).ToShortDateString() + " 12:00";
+            }
+
+
+            if ((int)System.DateTime.Now.DayOfWeek == 0)
+            {
+                lastDay = System.DateTime.Now.ToShortDateString() + " 23:59";
+            }
+            else
+            {
+                lastDay = (DateTime.Now.AddDays(7 - (int)System.DateTime.Now.DayOfWeek)).ToShortDateString() + " 23:59";
+            }
+            
+            DateTime maxDate = DateTime.Parse(lastDay);
+
+            ViewBag.DateUntil = maxDate;
             DateTime minDate = Convert.ToDateTime(firstDay);
 
             var events = from e in db.Events.Include(a => a.Activity)
-                         where e.EventFrom >= minDate  && e.EventTo <=dateValue && e.IsActive
+                         where e.EventFrom >= minDate && e.EventTo <= maxDate && e.IsActive
                          orderby e.EventFrom ascending
                          select e;
             return View(events.ToList());
